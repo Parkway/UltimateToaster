@@ -6,29 +6,57 @@ fun main(args: Array<String>) {
         println("Lovely")
         println("\nNow, where should we get started?\nMiddlebury? \nWheatland? \nPumpernickelburg? \nNorth Sourton?")
         var townName = readLine()?.toLowerCase()
-            if (townName == "Middlebury")
+            if (townName == "middlebury")
                 middlebury()
-            if (townName == "Wheatland")
+            if (townName == "wheatland")
                 wheatland()
-            if (townName == "Pumpernickelburg")
+            if (townName == "pumpernickelburg")
                 pumpernickelburg()
-            if (townName == "North Sourton") {
+            if (townName == "north sourton") {
                 northsourton()
             }
     } else if (play == "no") {
-        println("That's fine, I guess. *cough*cunt*cough*")
+        println("That's fine, I guess.")
         return
     }
 }
 fun middlebury() {
     println("That's not even a goddamn bread.")
+    println("Anyways, what are you wanting to do here?\nRest?\nContinue on your adventure?\nExplore the Town?")
+    var middlechoice = readLine()?.toLowerCase()
+    if (middlechoice == "Rest")
+            println("Resting...\nResting...\nResting...")
+            println("Resting...\nResting...\nResting...")
+    if (middlechoice == "Continue")
+            println("Wow, you don't mess around.\nLet's go then.")
 }
 fun wheatland() {
-    print("Ah, a lovely village.")
+    println("Ah, a lovely village.")
+    println("Anyways, what are you wanting to do here?\nRest?\nContinue on your adventure?\nExplore the Town?")
+    var wheatchoice = readLine()?.toLowerCase()
+    if (wheatchoice == "Rest")
+        println("Resting...\nResting...\nResting...")
+    println("Resting...\nResting...\nResting...")
+    if (wheatchoice == "Continue")
+        println("Wow, you don't mess around.\nLet's go then.")
 }
 fun pumpernickelburg() {
-    print("Alright, off to Pumpernickelburg we go!")
+    println("Alright, off to Pumpernickelburg we go!")
+    println("Anyways, what are you wanting to do here?\nRest?\nContinue on your adventure?\nExplore the Town?")
+    var pumperchoice = readLine()?.toLowerCase()
+    if (pumperchoice == "Rest")
+        println("Resting...\nResting...\nResting...")
+    println("Resting...\nResting...\nResting...")
+    if (pumperchoice == "Continue")
+        println("Wow, you don't mess around.\nLet's go then.")
 }
 fun northsourton() {
-    print("Cancer")
+    println("Ah, the tastiest village around.")
+    println("Anyways, what are you wanting to do here?\nRest?\nContinue on your adventure?\nExplore the Town?")
+    var northchoice = readLine()?.toLowerCase()
+    if (northchoice == "Rest")
+        println("Resting...\nResting...\nResting...")
+    println("Resting...\nResting...\nResting...")
+    if (northchoice == "Continue")
+        println("Wow, you don't mess around.\nLet's go then.")
 }
