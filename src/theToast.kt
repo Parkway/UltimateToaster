@@ -36,9 +36,10 @@ fun wheatland() {
     var wheatchoice = readLine()?.toLowerCase()
     if (wheatchoice == "Rest")
         println("Resting...\nResting...\nResting...")
-    println("Resting...\nResting...\nResting...")
+        println("Resting...\nResting...\nResting...")
     if (wheatchoice == "Continue")
         println("Wow, you don't mess around.\nLet's go then.")
+
 }
 fun pumpernickelburg() {
     println("Alright, off to Pumpernickelburg we go!")
@@ -46,7 +47,7 @@ fun pumpernickelburg() {
     var pumperchoice = readLine()?.toLowerCase()
     if (pumperchoice == "Rest")
         println("Resting...\nResting...\nResting...")
-    println("Resting...\nResting...\nResting...")
+        println("Resting...\nResting...\nResting...")
     if (pumperchoice == "Continue")
         println("Wow, you don't mess around.\nLet's go then.")
 }
@@ -56,7 +57,7 @@ fun northsourton() {
     var northchoice = readLine()?.toLowerCase()
     if (northchoice == "Rest")
         println("Resting...\nResting...\nResting...")
-    println("Resting...\nResting...\nResting...")
+        println("Resting...\nResting...\nResting...")
     if (northchoice == "Continue")
         println("Wow, you don't mess around.\nLet's go then.")
 }
