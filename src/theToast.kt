@@ -1,24 +1,21 @@
-/**
- * Created by parkway on 4/14/16.
- */
 fun main(args: Array<String>) {
     println("I am a toast. Follow me on my quest to become the ultimate toast.")
     println("Do you accept?")
-    var dicks = readLine()?.toLowerCase()
-    if (dicks == "yes") {
+    var play = readLine()?.toLowerCase()
+    if (play == "yes") {
         println("Lovely")
         println("\nNow, where should we get started?\nMiddlebury? \nWheatland? \nPumpernickelburg? \nNorth Sourton?")
-        var dicks2 = readLine()?.toLowerCase()
-            if (dicks2 == "Middlebury")
+        var townName = readLine()?.toLowerCase()
+            if (townName == "Middlebury")
                 middlebury()
-            if (dicks2 == "Wheatland")
+            if (townName == "Wheatland")
                 wheatland()
-            if (dicks2 == "Pumpernickelburg")
+            if (townName == "Pumpernickelburg")
                 pumpernickelburg()
-            if (dicks2 == "North Sourton") {
+            if (townName == "North Sourton") {
                 northsourton()
             }
-    } else if (dicks == "no") {
+    } else if (play == "no") {
         println("That's fine, I guess. *cough*cunt*cough*")
         return
     }
@@ -30,7 +27,7 @@ fun wheatland() {
     print("Ah, a lovely village.")
 }
 fun pumpernickelburg() {
-    print("Test")
+    print("Alright, off to Pumpernickelburg we go!")
 }
 fun northsourton() {
     print("Cancer")
