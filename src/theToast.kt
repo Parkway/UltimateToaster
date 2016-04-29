@@ -1,3 +1,5 @@
+import kotlin.system.exitProcess
+
 fun main(args: Array<String>) {
     start()
 }
@@ -5,8 +7,9 @@ fun start() {
     println("I am Butters the Toast. Follow me on my quest to become the ultimate toast.")
     println("Do you accept?")
     var play = readLine()?.toLowerCase()
-    if (play == "yes")
-        yes()
+    if (play == "yes") {
+        println("Lovely.")
+        yes() }
     else if (play == "no")
         no()
     else
@@ -14,7 +17,6 @@ fun start() {
         start()
 }
 fun yes() {
-        println("Lovely")
         println("\nNow, where should we get started?\nMiddlebury? \nWheatland? \nPumpernickelburg? \nNorth Sourton?")
         var townName = readLine()?.toLowerCase()
         if (townName == "middlebury")
@@ -25,7 +27,11 @@ fun yes() {
         pumpernickelburg()
         if (townName == "north sourton")
         northsourton()
+    else
+            println("Please Try Again")
+            yes()
 }
 fun no() {
     println("Well that's fine. I'll just be a boring toast. *sniffles*")
+    exitProcess(1)
 }
