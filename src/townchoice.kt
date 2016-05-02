@@ -1,24 +1,8 @@
 import kotlin.system.exitProcess
 
-fun middlebury() {
-    println("What would you like to do?\nRest?[1][1]\nContinue on your adventure?[2][2]\nExplore the Town?[3][3]")
-    var middlechoice = readLine()?.toLowerCase()
-    if (middlechoice == "rest"|| middlechoice == "1") {
-        rest()
-        middlebury()
-    } else if (middlechoice == "continue"|| middlechoice == "2") {
-        println("\nLet's go then.")
-        adventure()
-        exitProcess(1)
-    } else if (middlechoice == "explore"|| middlechoice == "3") {
-        exploremiddle()
-    } else {
-        println("That's not one of your options.")
-        middlebury()
-    }
-}
+
 fun wheatland() {
-    println("Anyways, what would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
+    println("What would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
     var wheatchoice = readLine()?.toLowerCase()
     if (wheatchoice == "rest" || wheatchoice == "1") {
         rest()
@@ -36,11 +20,12 @@ fun pumpernickelburg() {
     if (pumperchoice == "rest" || pumperchoice == "1") {
         rest()
         pumpernickelburg()
-    } else if (pumperchoice == "continue") {
+    } else if (pumperchoice == "continue"||pumperchoice == "2") {
         println("Wow, you don't mess around.\nLet's go then.")
         adventure()
-    } else if (pumperchoice == "explore")
+    } else if (pumperchoice == "explore"||pumperchoice == "3") {
         explorepump()
+    }
 }
 fun northsourton() {
     println("Now, what would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
@@ -51,8 +36,25 @@ fun northsourton() {
     } else if (northchoice == "continue"|| northchoice == "2") {
         println("Wow, you don't mess around.\nLet's go then.")
         adventure()
-    } else if (northchoice == "explore"|| northchoice == "2") {
+    } else if (northchoice == "explore"|| northchoice == "3") {
         explorenorth()
+    }
+}
+fun middlebury() {
+    println("What would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
+    var middlechoice = readLine()?.toLowerCase()
+    if (middlechoice == "rest"|| middlechoice == "1") {
+        rest()
+        middlebury()
+    } else if (middlechoice == "continue"|| middlechoice == "2") {
+        println("\nLet's go then.")
+        adventure()
+        exitProcess(1)
+    } else if (middlechoice == "explore"|| middlechoice == "3") {
+        exploremiddle()
+    } else {
+        println("That's not one of your options.")
+        middlebury()
     }
 }
 fun rest() {
