@@ -7,27 +7,37 @@ fun start() {
     println("I am Butters the Toast. Follow me on my quest to become the ultimate toast.")
     println("Do you accept?")
     var play = readLine()?.toLowerCase()
-    if (play == "yes") {
+    if(play!!.contains("y")) {
         println("Lovely.")
         yes() }
-    else if (play == "no")
+    else if (play.contains("n")) {
         no()
-    else
-        println("Please try again. It's a yes or no question.")
+    } else {
+        println("Please try again. It's a yes or no question.\n")
         start()
+    }
 }
 fun yes() {
-        println("\nNow, where should we get started?\nMiddlebury? \nWheatland? \nPumpernickelburg? \nNorth Sourton?")
+        println("\nNow, where should we get started?\n\nWheatland?[1] \nPumpernickelburg?[2] \nNorth Sourton?[3] \nMiddlebury?[4] ")
         var townName = readLine()?.toLowerCase()
-        if (townName == "middlebury")
+
+        if (townName == "wheatland"|| townName == "1") {
+            println("Ah, a very nice village.")
+            wheatland()
+        }
+        if (townName == "pumpernickelburg"|| townName == "2") {
+            println("Alright, off to Pumpernickelburg we go!")
+            pumpernickelburg()
+        }
+        if (townName == "north sourton"|| townName == "3") {
+            println("Ah, the tastiest village around.")
+            northsourton()
+        }
+        if (townName == "middlebury"|| townName == "4") {
+        println("Literally not even bread a kind of bread..")
         middlebury()
-        if (townName == "wheatland")
-        wheatland()
-        if (townName == "pumpernickelburg")
-        pumpernickelburg()
-        if (townName == "north sourton")
-        northsourton()
-    else
+    }
+        else
             println("Please Try Again")
             yes()
 }

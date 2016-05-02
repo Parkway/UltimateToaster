@@ -1,75 +1,40 @@
 import kotlin.system.exitProcess
 
 fun middlebury() {
-    println("What would you like to do?\nRest?\nContinue on your adventure?\nExplore the Town?")
+    println("What would you like to do?\nRest?[1][1]\nContinue on your adventure?[2][2]\nExplore the Town?[3][3]")
     var middlechoice = readLine()?.toLowerCase()
-    if (middlechoice == "rest") {
-        var i = 3
-        while (i > 0) {
-            print("Resting")
-            Thread.sleep(400)
-            print(".")
-            Thread.sleep(400)
-            print(".")
-            Thread.sleep(400)
-            print(".")
-            Thread.sleep(800)
-            println("\n")
-            i--
-        }
+    if (middlechoice == "rest"|| middlechoice == "1") {
+        rest()
         middlebury()
-    } else if (middlechoice == "continue") {
+    } else if (middlechoice == "continue"|| middlechoice == "2") {
         println("\nLet's go then.")
         adventure()
         exitProcess(1)
-    } else if (middlechoice == "explore") {
+    } else if (middlechoice == "explore"|| middlechoice == "3") {
         exploremiddle()
-    }else
+    } else {
         println("That's not one of your options.")
         middlebury()
+    }
 }
 fun wheatland() {
-    println("Ah, a lovely village.")
-    println("Anyways, what would you like to do?\nRest?\nContinue on your adventure?\nExplore the Town?")
+    println("Anyways, what would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
     var wheatchoice = readLine()?.toLowerCase()
-    if (wheatchoice == "rest") {
-        var i = 3
-        while (i > 0) {
-            print("Resting")
-            Thread.sleep(400)
-            print(".")
-            Thread.sleep(400)
-            print(".")
-            Thread.sleep(400)
-            print(".")
-            Thread.sleep(800)
-            println("\n")
-            i--
-        }
-    } else if (wheatchoice == "continue") {
+    if (wheatchoice == "rest" || wheatchoice == "1") {
+        rest()
+        wheatland()
+    } else if (wheatchoice == "continue"|| wheatchoice == "2") {
         println("Wow, you don't mess around.\nLet's go then.")
         adventure()
-    } else if (wheatchoice == "explore")
+    } else if (wheatchoice == "explore"|| wheatchoice == "3") {
         explorewheat()
+    }
 }
 fun pumpernickelburg() {
-    println("Alright, off to Pumpernickelburg we go!")
-    println("What would you like to do?\nRest?\nContinue on your adventure?\nExplore the Town?")
+    println("What would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
     var pumperchoice = readLine()?.toLowerCase()
-    if (pumperchoice == "rest") {
-        var i = 3
-        while (i > 0) {
-            print("Resting")
-            Thread.sleep(400)
-            print(".")
-            Thread.sleep(400)
-            print(".")
-            Thread.sleep(400)
-            print(".")
-            Thread.sleep(800)
-            println("\n")
-            i--
-        }
+    if (pumperchoice == "rest" || pumperchoice == "1") {
+        rest()
         pumpernickelburg()
     } else if (pumperchoice == "continue") {
         println("Wow, you don't mess around.\nLet's go then.")
@@ -78,28 +43,31 @@ fun pumpernickelburg() {
         explorepump()
 }
 fun northsourton() {
-    println("Ah, the tastiest village around.")
-    println("Anyways, what would you like to do?\nRest?\nContinue on your adventure?\nExplore the Town?")
+    println("Now, what would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
     var northchoice = readLine()?.toLowerCase()
-    if (northchoice == "rest") {
-        var i = 3
-        while (i > 0) {
-            print("Resting")
-            Thread.sleep(400)
-            print(".")
-            Thread.sleep(400)
-            print(".")
-            Thread.sleep(400)
-            print(".")
-            Thread.sleep(800)
-            println("\n")
-            i--
-        }
+    if (northchoice == "rest" || northchoice == "1") {
+        rest()
         northsourton()
-    } else if (northchoice == "continue") {
+    } else if (northchoice == "continue"|| northchoice == "2") {
         println("Wow, you don't mess around.\nLet's go then.")
         adventure()
-    } else if (northchoice == "explore") {
+    } else if (northchoice == "explore"|| northchoice == "2") {
         explorenorth()
     }
+}
+fun rest() {
+    var i = 3
+    while (i > 0) {
+        print("Resting")
+        Thread.sleep(400)
+        print(".")
+        Thread.sleep(400)
+        print(".")
+        Thread.sleep(400)
+        print(".")
+        Thread.sleep(800)
+        println("")
+        i--
+    }
+    println("\n")
 }
