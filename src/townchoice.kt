@@ -3,7 +3,7 @@ import kotlin.system.exitProcess
 
 fun wheatland() {
     println("What would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
-    var wheatchoice = readLine()?.toLowerCase()
+    val wheatchoice = readLine()?.toLowerCase()
     if (wheatchoice == "rest" || wheatchoice == "1") {
         rest()
         wheatland()
@@ -16,7 +16,7 @@ fun wheatland() {
 }
 fun pumpernickelburg() {
     println("What would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
-    var pumperchoice = readLine()?.toLowerCase()
+    val pumperchoice = readLine()?.toLowerCase()
     if (pumperchoice == "rest" || pumperchoice == "1") {
         rest()
         pumpernickelburg()
@@ -29,7 +29,7 @@ fun pumpernickelburg() {
 }
 fun northsourton() {
     println("Now, what would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
-    var northchoice = readLine()?.toLowerCase()
+    val northchoice = readLine()?.toLowerCase()
     if (northchoice == "rest" || northchoice == "1") {
         rest()
         northsourton()
@@ -42,7 +42,7 @@ fun northsourton() {
 }
 fun middlebury() {
     println("What would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
-    var middlechoice = readLine()?.toLowerCase()
+    val middlechoice = readLine()?.toLowerCase()
     if (middlechoice == "rest"|| middlechoice == "1") {
         rest()
         middlebury()
