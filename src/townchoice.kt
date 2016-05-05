@@ -1,64 +1,82 @@
-import kotlin.system.exitProcess
-
-
 fun wheatland() {
     println("What would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
     val wheatchoice = readLine()?.toLowerCase()
-    if (wheatchoice == "rest" || wheatchoice == "1") {
-        rest()
-        wheatland()
-    } else if (wheatchoice == "continue"|| wheatchoice == "2") {
-        println("Wow, you don't mess around.\nLet's go then.")
-        adventure()
-    } else if (wheatchoice == "explore"|| wheatchoice == "3") {
-        explorewheat()
+    when (wheatchoice) {
+        "rest","1" -> {
+            rest()
+            wheatland()
+        } "continue","2" -> {
+            println("Let's get going then!")
+            adventure0()
+        } "explore","3" -> {
+            explorewheat()
+        }
+        else -> {
+            println("Not an option, please try again.")
+            wheatland()
+        }
     }
 }
 fun pumpernickelburg() {
     println("What would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
     val pumperchoice = readLine()?.toLowerCase()
-    if (pumperchoice == "rest" || pumperchoice == "1") {
-        rest()
-        pumpernickelburg()
-    } else if (pumperchoice == "continue"||pumperchoice == "2") {
-        println("Wow, you don't mess around.\nLet's go then.")
-        adventure()
-    } else if (pumperchoice == "explore"||pumperchoice == "3") {
-        explorepump()
+    when (pumperchoice) {
+        "rest","1" -> {
+            rest()
+            pumpernickelburg()
+        } "continue","2" -> {
+            println("Let's get going then!")
+            adventure0()
+        } "explore","3" -> {
+            explorepump()
+        }
     }
 }
 fun northsourton() {
     println("Now, what would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
     val northchoice = readLine()?.toLowerCase()
-    if (northchoice == "rest" || northchoice == "1") {
-        rest()
-        northsourton()
-    } else if (northchoice == "continue"|| northchoice == "2") {
-        println("Wow, you don't mess around.\nLet's go then.")
-        adventure()
-    } else if (northchoice == "explore"|| northchoice == "3") {
-        explorenorth()
+    when (northchoice) {
+        "rest","1" -> {
+            rest()
+            northsourton()
+        } "continue","2" -> {
+            println("Let's get going then!")
+            adventure0()
+        } "explore","3" -> {
+            explorenorth()
+        }
     }
 }
 fun middlebury() {
     println("What would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
     val middlechoice = readLine()?.toLowerCase()
-    if (middlechoice == "rest"|| middlechoice == "1") {
-        rest()
-        middlebury()
-    } else if (middlechoice == "continue"|| middlechoice == "2") {
-        println("\nLet's go then.")
-        adventure()
-        exitProcess(1)
-    } else if (middlechoice == "explore"|| middlechoice == "3") {
-        exploremiddle()
-    } else {
-        println("That's not one of your options.")
-        middlebury()
+    when (middlechoice) {
+        "rest","1" -> {
+            rest()
+            middlebury()
+        } "continue","2" -> {
+            println("Let's get going then!")
+            adventure0()
+        } "explore","3" -> {
+            exploremiddle()
+        }
+        else -> {
+            println("Not one of the options.")
+            middlebury()
+        }
     }
 }
 fun rest() {
-    var i = 3
+    println("How many hours would you like to rest?")
+    var i = readLine()!!.toInt()
+    if (i > 20) {
+        println("That's too much sleep. The adventure will be over before you even wake up.")
+        rest()
+    }
+    if (i < 0) {
+        println("You can't sleep negative hours, numbnuts.")
+        rest()
+    }
     while (i > 0) {
         print("Resting")
         Thread.sleep(400)

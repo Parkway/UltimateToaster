@@ -30,7 +30,7 @@ fun exploremiddle() {
     println("After searching Middlebury for several hours, you find: \nAn Inn[1]\nAn Armory[2]")
     println("Where would you like to go?")
     val midchoice = readLine()?.toLowerCase()
-    if (midchoice == "inn" || midchoice == "1") {
+    if (midchoice == "inn"|| midchoice == "1") {
         inn()
     } else if (midchoice == "armory" || midchoice == "2") {
         armory()

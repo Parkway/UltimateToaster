@@ -4,11 +4,13 @@ fun main(args: Array<String>) {
     start()
 }
 fun start() {
-    println("I am Butters the Toast. Follow me on my quest to become the ultimate toast.")
+    println("You are Butters, the most heroic Toast in all the land.\n" +
+            "Your king has tasked you with one goal.\n" +
+            "Find the fabled Strawberry Jam Mountains, and bring back it's plentiful bounty to your kingdom.")
     println("Do you accept?")
     val play = readLine()?.toLowerCase()
     if(play!!.contains("y")) {
-        println("Lovely.")
+        println("Excellent!")
         yes() }
     else if (play.contains("n")) {
         no()
@@ -18,7 +20,7 @@ fun start() {
     }
 }
 fun yes() {
-    println("\nNow, where should we get started?\n\nWheatland?[1] \nPumpernickelburg?[2] \nNorth Sourton?[3] \nMiddlebury?[4] ")
+    println("\nNow, where should we get started?\n\nWheatland?[1] \nPumpernickelburg?[2] \nNorth Sourton?[3] \nMiddlebury?[4]")
     var x = readLine()?.toLowerCase()
     when (x) {
         "wheatland","1" -> {
@@ -42,24 +44,6 @@ fun yes() {
             yes()
         }
     }
-      /*
-        val townName = readLine()?.toLowerCase()
-        if (townName == "wheatland"|| townName == "1") {
-            println("Ah, a very nice village.")
-            wheatland()
-        } else if (townName == "pumpernickelburg"|| townName == "2") {
-            println("Alright, off to Pumpernickelburg we go!")
-            pumpernickelburg()
-        } else if (townName == "north sourton"|| townName == "3") {
-            println("Ah, the tastiest village around.")
-            northsourton()
-        } else if (townName == "middlebury"|| townName == "4") {
-        println("Literally not even a kind of bread..")
-        middlebury()
-    }
-        else
-            println("Please Try Again")
-            yes()*/
 }
 fun no() {
     println("Well that's fine. I'll just be a boring toast. *sniffles*")
