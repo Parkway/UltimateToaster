@@ -32,40 +32,6 @@ fun pumpernickelburg() {
         }
     }
 }
-fun northsourton() {
-    println("Now, what would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
-    val northchoice = readLine()?.toLowerCase()
-    when (northchoice) {
-        "rest","1" -> {
-            rest()
-            northsourton()
-        } "continue","2" -> {
-            println("Let's get going then!")
-            adventure0()
-        } "explore","3" -> {
-            explorenorth()
-        }
-    }
-}
-fun middlebury() {
-    println("What would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
-    val middlechoice = readLine()?.toLowerCase()
-    when (middlechoice) {
-        "rest","1" -> {
-            rest()
-            middlebury()
-        } "continue","2" -> {
-            println("Let's get going then!")
-            adventure0()
-        } "explore","3" -> {
-            exploremiddle()
-        }
-        else -> {
-            println("Not one of the options.")
-            middlebury()
-        }
-    }
-}
 fun rest() {
     println("How many hours would you like to rest?")
     var i = readLine()!!.toInt()

@@ -1,42 +1,45 @@
 fun main(args: Array<String>) {
 
 }
-fun explorenorth() {
-    println("After searching North Sourton for several hours, you find: \nAn Inn[1]\nAn Altar\nAn Armory[3]")
-    println("Where would you like to go?")
-    val northchoice = readLine()?.toLowerCase()
-    if (northchoice == "armory" || northchoice == "2") {
-        armory()
+
+fun explorewheat() {
+    println("After searching Wheatland for several hours, you find: \nAn Inn[1] and an Armory[2]\n" +
+            "If you're ready to leave, you can Exit[3] the town, or Continue[4] on your adventure." +
+            "What would you like to do?")
+    val wheatchoice = readLine()?.toLowerCase()
+    when(wheatchoice) {
+        "inn","1" -> {
+            inn()
+            explorewheat()
+        }"armory","2" -> {
+            armory()
+            explorewheat()
+        }"exit","3" -> {
+            yes()
+        }"continue","4" -> {
+            adventure0()
+        }
     }
 }
 fun explorepump() {
-    println("After searching Pumpernickelburg for several hours, you find: \nAn Armory[1]")
-    println("Where would you like to go?")
+    println("After searching Pumpernickelburg for several hours, you find: \nAn Altar[1]" +
+            "If you're ready to leave, you can Exit[2] the town or Continue[3] at any time." +
+            "Where would you like to go?\n")
     val pumpchoice = readLine()?.toLowerCase()
-    if (pumpchoice == "armory"|| pumpchoice == "1") {
-        armory()
-        explorepump()
+    when (pumpchoice) {
+        "altar","1" -> {
+            println("The inscription beneath the massive stone shrine reads\n" +
+                    "\"In honor of our creator, the Hobart Toaster.\"\n" +
+                    "The statue has a stange, surreal mist surrounding it.")
+            explorepump()
+        }"exit","2" -> {
+            yes()
+        }"continue","3" -> {
+            println("Better get going.")
+            adventure0()
+        }
     }
 }
-fun explorewheat() {
-    println("After searching Wheatland for several hours, you find: \nAn Inn[1]\nAn Armory[2]")
-    println("Where would you like to go?")
-    val wheatchoice = readLine()?.toLowerCase()
-    if (wheatchoice == "armory" || wheatchoice == "2") {
-        armory()
-    }
-}
-fun exploremiddle() {
-    println("After searching Middlebury for several hours, you find: \nAn Inn[1]\nAn Armory[2]")
-    println("Where would you like to go?")
-    val midchoice = readLine()?.toLowerCase()
-    if (midchoice == "inn"|| midchoice == "1") {
-        inn()
-    } else if (midchoice == "armory" || midchoice == "2") {
-        armory()
-    }
-}
-
 fun armory() {
     println("You chat up the blacksmith, and he offers you armor and a weapon. Do you accept?")
     val armorchoice = readLine()?.toLowerCase()
@@ -53,6 +56,7 @@ fun inn() {
     val choice = readLine()?.toLowerCase()
     if (choice == "yes") {
         println("\"We only have one room remaining. Here is the key. Room 7.\"")
+
     }
 
 }

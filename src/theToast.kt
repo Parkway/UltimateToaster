@@ -20,7 +20,7 @@ fun start() {
     }
 }
 fun yes() {
-    println("\nNow, where should we get started?\n\nWheatland?[1] \nPumpernickelburg?[2] \nNorth Sourton?[3] \nMiddlebury?[4]")
+    println("\nThe great kingdom of Wholegrain consists of two towns:\nWheatland[1] and Pumpernickelburg[2]\nWhere would you like to go?")
     var x = readLine()?.toLowerCase()
     when (x) {
         "wheatland","1" -> {
@@ -30,14 +30,6 @@ fun yes() {
         "pumpernickelburg","2" -> {
             println("Off to Pumpernickelburg we go.")
             pumpernickelburg()
-        }
-        "north sourton","3" -> {
-            println("Delicious.")
-            northsourton()
-        }
-        "middlebury","4" -> {
-            println("Literally not even a kind of bread.")
-            middlebury()
         }
         else -> {
             println("Please try again.")
