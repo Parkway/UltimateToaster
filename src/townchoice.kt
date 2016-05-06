@@ -1,14 +1,11 @@
 fun wheatland() {
-    println("What would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
+    println("What would you like to do?\nContinue on your adventure?[1]\nExplore the Town?[2]")
     val wheatchoice = readLine()?.toLowerCase()
     when (wheatchoice) {
-        "rest","1" -> {
-            rest()
-            wheatland()
-        } "continue","2" -> {
+        "continue","1" -> {
             println("Let's get going then!")
             adventure0()
-        } "explore","3" -> {
+        }"explore","2" -> {
             explorewheat()
         }
         else -> {
@@ -18,16 +15,13 @@ fun wheatland() {
     }
 }
 fun pumpernickelburg() {
-    println("What would you like to do?\nRest?[1]\nContinue on your adventure?[2]\nExplore the Town?[3]")
+    println("What would you like to do?\nContinue on your adventure?[1]\nExplore the Town?[2]")
     val pumperchoice = readLine()?.toLowerCase()
     when (pumperchoice) {
-        "rest","1" -> {
-            rest()
-            pumpernickelburg()
-        } "continue","2" -> {
+         "continue","1" -> {
             println("Let's get going then!")
             adventure0()
-        } "explore","3" -> {
+        }"explore","2" -> {
             explorepump()
         }
     }
@@ -55,5 +49,5 @@ fun rest() {
         println("")
         i--
     }
-    println("\n")
+    println("You wake up feeling very refreshed.\n")
 }
