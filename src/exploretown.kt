@@ -39,6 +39,14 @@ fun explorewheat() {
                         "inn","1" -> {
                             inn()
                             println("You've now explored the whole town.\nWould you like to visit Pumpernickelburg[3], or get on with your Adventure[4]?")
+                                var wheatchoice5 = readLine()?.toLowerCase()
+                                when(wheatchoice5) {
+                                    "pumpernickelburg","3" -> {
+                                        pumpernickelburg()
+                                    }"continue","adventure","4" -> {
+                                        adventure0()
+                                    }
+                                }
                         }"pumpernickelburg","3" -> {
                         println("You arrive at Pumpernickelburg.")
                         explorepump()
@@ -73,7 +81,7 @@ fun explorepump() {
             when(pumpchoice2) {
                 "continue","1" -> {
                     adventure0()
-                }"Wheatland","2" -> {
+                }"wheatland","2" -> {
                 explorewheat()
                 }
             }
@@ -122,6 +130,7 @@ fun inn() {
 
     } else {
         println("Oh, uh okay.")
+
     }
 
 }

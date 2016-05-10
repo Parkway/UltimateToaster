@@ -14,7 +14,7 @@ fun start() {
         yes() }
     else if (play.contains("n")) {
         no()
-    } else {
+    }else {
         println("Please try again. It's a yes or no question.\n")
         start()
     }
