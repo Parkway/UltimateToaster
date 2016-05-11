@@ -129,7 +129,7 @@ fun inn() {
                 }
 
     } else {
-        println("Oh, uh okay.")
+        println("Oh, uh okay. ")
 
     }
 

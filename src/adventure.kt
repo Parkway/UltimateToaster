@@ -17,9 +17,41 @@ fun adventure1() {
             exitProcess(1)
         }"throw penny","2" -> {
             println("You reach into your pocket and produce a small copper disc, and chuck it into the well.\n" +
-                    "You listen to the penny ricochet from wall to wall while it falls into the dark nothingness.")
+                    "You listen to the penny ricochet from wall to wall while it falls into the dark nothingness." +
+                    "You continue on the journey.")
+            adventure2()
         }"ignore","continue","3" -> {
+            println("You continue on the journey.\n")
+            var c = 5335778
+            while(c >= 0) {
+                print(".")
+                Thread.sleep(400)
+                print(".")
+                Thread.sleep(400)
+                println(".")
+                Thread.sleep(400)
+                c--
+            }
+            println("\n")
+            adventure2()
+        }
+    }
+}
+fun adventure2() {
+    println("After traversing miles of dangerous forest, night falls. Do you want to push through the night[1], or settle in and find a place to sleep?[2]")
+    var night = readLine()
+        when(night) {
+            "night","1" -> {
+                println("If you insist...")
 
-    }
-    }
+            }"sleep","2" -> {
+                println("You find a crevice in a rock and take refuge under it.")
+                rest()
+                println("You safely survived the night.")
+                adventure3()
+            }
+        }
+}
+fun adventure3() {
+    println("")
 }
