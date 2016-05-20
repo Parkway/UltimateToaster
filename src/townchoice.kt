@@ -32,22 +32,21 @@ fun rest() {
     if (i > 20) {
         println("That's too much sleep. The adventure will be over before you even wake up.")
         rest()
-    }
-    if (i < 0) {
+    } else if (i < 0) {
         println("You can't sleep negative hours, numbnuts.")
         rest()
+    } else {
+        while (i > 0) {
+            print("Resting")
+            Thread.sleep(400)
+            print(".")
+            Thread.sleep(400)
+            print(".")
+            Thread.sleep(400)
+            print(".")
+            Thread.sleep(800)
+            println("")
+            i--
+        }
     }
-    while (i > 0) {
-        print("Resting")
-        Thread.sleep(400)
-        print(".")
-        Thread.sleep(400)
-        print(".")
-        Thread.sleep(400)
-        print(".")
-        Thread.sleep(800)
-        println("")
-        i--
-    }
-    println("You wake up feeling very refreshed.\n")
 }

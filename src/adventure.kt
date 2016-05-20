@@ -14,6 +14,7 @@ fun adventure1() {
                     "You grab the bucket and begin to slurp loudly when it occurs to you that you're a toast, and drop the bucket quickly.\n" +
                     "But it's too late. You begin to decompose into a soggy mess and crumble to the ground.\n" +
                     "You have died.")
+            Thread.sleep(7500)
             exitProcess(1)
         }"throw penny","2" -> {
             println("You reach into your pocket and produce a small copper disc, and chuck it into the well.\n" +
@@ -22,24 +23,23 @@ fun adventure1() {
             adventure2()
         }"ignore","continue","3" -> {
             println("You continue on the journey.\n")
-            var c = 5335778
+            var c = 10
             while(c >= 0) {
                 print(".")
-                Thread.sleep(400)
+                Thread.sleep(300)
                 print(".")
-                Thread.sleep(400)
+                Thread.sleep(300)
                 println(".")
-                Thread.sleep(400)
+                Thread.sleep(300)
                 c--
             }
-            println("\n")
             adventure2()
         }
     }
 }
 fun adventure2() {
     println("After traversing miles of dangerous forest, night falls. Do you want to push through the night[1], or settle in and find a place to sleep?[2]")
-    var night = readLine()
+    val night = readLine()
         when(night) {
             "night","1" -> {
                 println("If you insist...")
@@ -49,6 +49,9 @@ fun adventure2() {
                 rest()
                 println("You safely survived the night.")
                 adventure3()
+            } else -> {
+                println("That isn't an option.")
+                adventure2()
             }
         }
 }

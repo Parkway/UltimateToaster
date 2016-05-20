@@ -11,12 +11,12 @@ fun explorewheat() {
         "inn","1" -> {
             inn()
             println("What would you like to do next? Visit the Armory[2], or visit Pumpernickelburg[3]? Or Continue[4] on your adventure?")
-            var wheatchoice2 = readLine()!!.toLowerCase()
+            val wheatchoice2 = readLine()!!.toLowerCase()
             when(wheatchoice2) {
                 "armory","2" -> {
                     armory()
                     println("You've now explored the whole town.\nWould you like to visit Pumpernickelburg[3], or get on with your Adventure[4]?")
-                    var leavestay = readLine()!!.toLowerCase()
+                    val leavestay = readLine()!!.toLowerCase()
                         if(leavestay == "3" || leavestay == "pumpernickelburg")
                             println("You arrive at Pumpernickelburg.")
                             explorepump()
@@ -34,12 +34,12 @@ fun explorewheat() {
             armory()
             println("What would you like to visit next?\n" +
                     "Go to the Inn[1]? Go to Pumpernickelburg[3]? Continue[4] on your adventure?")
-                    var wheatchoice4 = readLine()!!.toLowerCase()
+                    val wheatchoice4 = readLine()!!.toLowerCase()
                     when(wheatchoice4) {
                         "inn","1" -> {
                             inn()
                             println("You've now explored the whole town.\nWould you like to visit Pumpernickelburg[3], or get on with your Adventure[4]?")
-                                var wheatchoice5 = readLine()?.toLowerCase()
+                                val wheatchoice5 = readLine()?.toLowerCase()
                                 when(wheatchoice5) {
                                     "pumpernickelburg","3" -> {
                                         pumpernickelburg()
@@ -77,12 +77,15 @@ fun explorepump() {
                     "\"In honor of our creator, the Hobart Toaster.\"\n" +
                     "The statue has a stange, surreal mist surrounding it.")
             println("It wasn't a very exciting town, and you've explored everything of value.\nWould you like to Continue[1] your adventure or go to Wheatland[2]?")
-            var pumpchoice2 = readLine()!!.toLowerCase()
+            val pumpchoice2 = readLine()!!.toLowerCase()
             when(pumpchoice2) {
                 "continue","1" -> {
                     adventure0()
                 }"wheatland","2" -> {
-                explorewheat()
+                    explorewheat()
+                } else -> {
+                    println("Please try again.\n")
+                    explorepump()
                 }
             }
         }"exit","2" -> {
@@ -107,6 +110,7 @@ fun armory() {
     }
 }
 fun inn() {
+    val ref = "You wake up feeling very refreshed."
     println("You walk into the inn and are greeted by an older sourdough toast.")
     println("\"My name is Jefferson, and I'm the Innkeeper. Are you in need of a place to stay?\"")
     val choice = readLine()?.toLowerCase()
@@ -117,14 +121,16 @@ fun inn() {
                 if (choice2!!.contains("y")) {
                     println("\"Perfect. Enjoy your stay.\"\n")
                     rest()
+                    println(ref)
                 } else {
                     println("Oh, well unfortunately that's all we have. Are you sure it doesn't suffice?")
-                    var choice3 = readLine()?.toLowerCase()
+                    val choice3 = readLine()?.toLowerCase()
                         if (choice3!!.contains("y")) {
                             println("\"I'm sorry about that. I hope somewhere else will be more accomodating.\"\n")
                         } else {
                             println("\"Great! Please enjoy your stay.\"")
                             rest()
+                            println(ref)
                         }
                 }
 
