@@ -21,7 +21,7 @@ fun start() {
 }
 fun yes() {
     println("\nThe great kingdom of Wholegrain consists of two towns:\nWheatland[1] and Pumpernickelburg[2]\nWhere would you like to go?")
-    var x = readLine()?.toLowerCase()
+    val x = readLine()?.toLowerCase()
     when (x) {
         "wheatland","1" -> {
             println("Ah, a lovely village.")

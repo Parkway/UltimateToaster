@@ -15,7 +15,13 @@ fun adventure1() {
                     "But it's too late. You begin to decompose into a soggy mess and crumble to the ground.\n" +
                     "You have died.")
             Thread.sleep(7500)
-            exitProcess(1)
+            println("Would you like to play again?")
+            val again = readLine()
+            if (again!!.contains("y")) {
+               start()
+            } else {
+                exitProcess(1)
+            }
         }"throw penny","2" -> {
             println("You reach into your pocket and produce a small copper disc, and chuck it into the well.\n" +
                     "You listen to the penny ricochet from wall to wall while it falls into the dark nothingness." +
